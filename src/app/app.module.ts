@@ -9,19 +9,19 @@ import {DecoderComponent} from "./decoder.component";
 import {NavbarComponent} from "./navbar.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    EncoderComponent,
-    DecoderComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        EncoderComponent,
+        DecoderComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

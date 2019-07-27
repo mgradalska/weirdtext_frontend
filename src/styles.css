@@ -12,3 +12,7 @@
 .big-margin {
   margin-top: 20px;
 }
+
+.error-msg {
+  color: red;
+}

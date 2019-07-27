@@ -1,15 +1,17 @@
 <div class="container">
-  <div class="row">
-    <div class="col-lg-12 text-center">
-      <h1 class="mt-5">Encoder</h1>
-      <label for="originalText">Insert original text</label>
-      <textarea #text class="form-control text-box" id="originalText" rows="5"></textarea>
-      <button type="button" class="btn btn-primary small-margin" (click)="encodeText(text.value)">Encode</button>
-    </div>
+	<div class="row">
+		<div class="col-lg-12 text-center">
+			<h1 class="mt-5">Encoder</h1>
+			<label for="originalText">Insert original text</label>
+			<textarea #text class="form-control text-box" id="originalText" rows="5"></textarea>
+			<button type="button" class="btn btn-primary small-margin" (click)="encodeText(text.value)">Encode</button>
+		</div>
 
-    <div class="col-lg-12 text-center big-margin">
-      <label for="encodedText">Encoded result</label>
-      <textarea class="form-control text-box" id="encodedText" rows="5">{{encodedText}}</textarea>
-    </div>
-  </div>
+		<div class="col-lg-12 text-center big-margin">
+			<label for="encodedText">Encoded result</label>
+			<div *ngIf="loading">Loading...</div>
+			<div *ngIf="error" class="error-msg">{{error}}</div>
+			<textarea disabled class="form-control text-box" id="encodedText" rows="5">{{encodedText}}</textarea>
+		</div>
+	</div>
 </div>

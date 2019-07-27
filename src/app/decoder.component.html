@@ -1,15 +1,17 @@
 <div class="container">
-  <div class="row">
-    <div class="col-lg-12 text-center">
-      <h1 class="mt-5">Decoder</h1>
-      <label for="encodedText">Insert decoded text</label>
-      <textarea #text class="form-control text-box" id="encodedText" rows="5"></textarea>
-      <button type="button" class="btn btn-primary small-margin" (click)="decodeText(text.value)">Encode</button>
-    </div>
+	<div class="row">
+		<div class="col-lg-12 text-center">
+			<h1 class="mt-5">Decoder</h1>
+			<label for="encodedText">Insert decoded text</label>
+			<textarea #text class="form-control text-box" id="encodedText" rows="5"></textarea>
+			<button type="button" class="btn btn-primary small-margin" (click)="decodeText(text.value)">Encode</button>
+		</div>
 
-    <div class="col-lg-12 text-center big-margin">
-      <label for="decodedText">Decoded result</label>
-      <textarea class="form-control text-box" id="decodedText" rows="5">{{decodedText}}</textarea>
-    </div>
-  </div>
+		<div class="col-lg-12 text-center big-margin">
+			<label for="decodedText">Decoded result</label>
+			<div *ngIf="loading">Loading...</div>
+			<div *ngIf="error" class="error-msg">{{error}}</div>
+			<textarea disabled class="form-control text-box" id="decodedText" rows="5">{{decodedText}}</textarea>
+		</div>
+	</div>
 </div>
