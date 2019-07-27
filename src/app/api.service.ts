@@ -6,7 +6,7 @@ import {Observable} from "rxjs/index";
   providedIn: 'root'
 })
 export class ApiService {
-  apiUrl: String = 'http://weirdtext-app.herokuapp.com/v1/';
+  apiUrl: String = 'https://weirdtext-app.herokuapp.com/v1/';
 
   constructor(private httpClient: HttpClient) {
   }
